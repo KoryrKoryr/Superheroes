@@ -32,3 +32,17 @@ class Power(db.Model):
 
     def __repr__(self):
         return f'<Power id={self.id} name={self.name} description={self.description}>'
+
+
+# Table representing the association between Hero and Power
+class HeroPower(db.Model):
+    __tablename__= "hero_powers"
+    
+    id = db.Column(db.Integer, primary_key=True)
+    strength = db.Column(db.String, nullable=False)
+    hero_id = db.Column(db.Integer, db.ForeignKey('heroes.id'))
+    power_id = db.Column(db.Integer, db.ForeignKey('powers.id'))
+
+
+    def __repr__(self):
+        return f'<HeroPower id={self.id} strength={self.strength} hero_id={self.hero_id} power_id={self.power_id}>'
