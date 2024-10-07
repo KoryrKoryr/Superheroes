@@ -39,7 +39,7 @@ This API is ideal for applications that need to manage superheroes, their abilit
 
 ## Technologies Used
 
-- **Python 3**
+- **Python**
 - **Flask**: A lightweight web framework.
 - **Flask-SQLAlchemy**: ORM for managing database interactions.
 - **Flask-Migrate**: Handles database migrations.
