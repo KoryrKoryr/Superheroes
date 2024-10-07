@@ -42,7 +42,7 @@ if __name__ == '__main__':
         for hero in heroes:
             power = rc(powers)
             hero_powers.append(
-                HeroPower(hero=hero, power=power, strength=rc(strengths))
+                HeroPower(heroes=hero, powers=power, strength=rc(strengths))
             )
         db.session.add_all(hero_powers)
         db.session.commit()
