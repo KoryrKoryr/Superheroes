@@ -49,6 +49,8 @@ class HeroPower(db.Model, SerializerMixin):
     hero_id = db.Column(db.Integer, db.ForeignKey('heroes.id'))
     power_id = db.Column(db.Integer, db.ForeignKey('powers.id'))
 
+    serialize_only = ("id", "strength", "hero_id", "power_id")
+
 
     def __repr__(self):
         return f'<HeroPower id={self.id} strength={self.strength} hero_id={self.hero_id} power_id={self.power_id}>'
